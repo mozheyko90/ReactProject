@@ -1,0 +1,13 @@
+.menuItem {
+    border: 1px solid grey;
+    border-radius: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    color: dodgerblue;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
