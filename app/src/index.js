@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import Router from "./router/Routes";
 
 import "./index.css";
-import MayinLayout from "./components/Layouts";
+import MainLayout from "./components/Layouts";
 import { create } from "lodash";
 import { configureStore } from "./store/configureStore";
 
@@ -16,9 +16,9 @@ const store = configureStore();
 root.render(
   <BrowserRouter>
   <Provider store={store}>
-    <MayinLayout>
+    <MainLayout>
       <Router />
-    </MayinLayout>
+    </MainLayout>
     </Provider>
   </BrowserRouter>
 );

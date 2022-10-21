@@ -1,7 +1,6 @@
 import { ROUTE_NAMES } from "../../router/routeNames";
 import { Link } from "react-router-dom";
 import capitalize from "lodash/capitalize";
-import starCase from "lodash/startCase";
 
 import styles from "./index.module.scss";
 import startCase from "lodash/startCase";

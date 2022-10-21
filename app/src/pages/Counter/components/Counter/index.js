@@ -1,8 +1,5 @@
 import styles from "./index.module.scss";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { ROUTE_NAMES } from "../../../../router/routeNames";
-import { memo } from "react";
 
 const Counter = ({
   id,

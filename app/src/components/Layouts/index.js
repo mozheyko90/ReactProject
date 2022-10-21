@@ -1,6 +1,6 @@
 import Header from "../Header";
 
-const MayinLayout = ({ children }) => {
+const MainLayout = ({ children }) => {
   return (
     <div>
       <Header />
@@ -9,4 +9,4 @@ const MayinLayout = ({ children }) => {
   );
 };
 
-export default MayinLayout;
+export default MainLayout;

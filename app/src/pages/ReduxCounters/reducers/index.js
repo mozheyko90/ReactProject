@@ -11,6 +11,7 @@ export const countersManagerReducer = handleActions(
   {
     [actions.CREATE_COUNTER]: (state) => {
       const countersCopy = [...state.counters];
+      
       const newCounter = {
         id: uuid(),
         countValue: 0,
@@ -23,8 +24,10 @@ export const countersManagerReducer = handleActions(
         counters: countersCopy,
       };
     },
+
     [actions.INCREMENT_COUNTER]: (state, { payload: id }) => {
       const countersCopy = [...state.counters];
+      
       const foundCounter = countersCopy.find((counter) => counter.id === id);
 
       foundCounter.countValue += 1;
@@ -33,6 +36,19 @@ export const countersManagerReducer = handleActions(
         counters: countersCopy,
       };
     },
+
+    [actions.DECREMENT_COUNTER]: (state, { payload: id }) => {
+      const countersCopy = [...state.counters];
+      const foundCounter = countersCopy.find((counter) => counter.id === id);
+
+      foundCounter.countValue -= 1;
+
+      return {
+        counters: countersCopy,
+      };
+    },
+
+
     [actions.DELETE_COUNTER]: (state, { payload: id }) => {
         const countersCopy = [...state.counters];
         const counterIndexToRemove = countersCopy.findIndex((counter) => counter.id === id);
@@ -42,6 +58,7 @@ export const countersManagerReducer = handleActions(
             counters: countersCopy,
         };
   },
+  [actions.REMOVE_ALL_COUNTERS]: () => defaultState, 
 },
   defaultState
 );

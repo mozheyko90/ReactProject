@@ -1,1 +1,1 @@
-export const counters = (state) => state.countersManager.counters;
+export const countersSelector = (state) => state.countersManager.counters;
